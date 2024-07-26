@@ -1,0 +1,576 @@
+.site-header{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    padding: 0 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.128);
+    position: relative;
+    z-index: 100000;
+    >.side-menu-hover{
+        position: absolute;
+        right: 20px;
+        bottom: 25%;
+        font-size: 30px;
+        padding: 5px 22px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(131, 131, 131, 0.302);
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        font-weight: bolder;
+        &:hover + .side-menu{
+            right: 0;
+        }  
+        
+    }
+    >.side-menu{
+        transition: .5s;
+        position: absolute;
+        right: -200px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        box-shadow: 0 0 10px 10px rgba(129, 129, 129, 0.317);
+        &:hover{
+            right: 0;
+        }
+        >img{
+            padding: 0 30px;
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+        }
+        >.main-a{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            >a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 255, 0.658);
+                border: 1px solid rgba(0, 0, 255, 0.658);
+                border-radius: 10px;
+                color: white;
+                padding: 25px 60px;
+                transition: .5s;
+                &:hover{
+                    color: blue;
+                    background-color: rgba(0, 0, 255, 0);
+                    border: 1px solid rgba(0, 0, 255, 0.658);
+                    box-shadow: 0 0 3px 3px rgba(0, 0, 255, 0.145);
+                }
+            }
+        }
+        >.list{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            >a{
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                height: 40px;
+                margin-top: 10px;
+                margin-right: 30px;
+                &:hover{
+                    color: rgb(38, 0, 255);
+                }
+                
+                >i{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    >nav{
+        height: 100%;
+        min-width: 50px;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-wrap: wrap;
+        >.menu1{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            >a{
+                height: 100%;
+                align-content: center;
+                >img{
+                    height: 50%;
+                }
+            }
+            >div{
+                background-color: #F8F8FC;
+                border: 1px solid rgb(154, 154, 154);
+                border-radius: 5px;
+                display: flex;
+                height: 50%; 
+                margin-right: 30px;
+                >i{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    color: rgba(0, 0, 0, 0.567);
+                    padding: 0 5px;
+                }
+                >input{
+                    background-color: transparent;
+                    outline: 0;
+                    border: 0px;
+                    border-left: 2px solid rgba(0, 0, 0, 0.134);
+                    font-size: 20px;
+                    font-family: fanavari-bold;
+                }
+                >ul{
+                    height: 100%;
+                    >li{
+                        height: 100%;
+                        position: relative;
+                        &:hover{
+                            >div{
+                                height: 247px;
+                            }
+                        }
+                        >a{
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 100%;
+                            align-items: center;
+                            padding: 0 10px;
+                        }
+                        >div{
+                            position: absolute;
+                            z-index: 1000;
+                            left: 0;
+                            width: 250px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+                            height: 0px;
+                            transition: 1s;
+                            >span{
+                                height: 10px;
+                                color: transparent;
+                                width: 100%;
+                            }
+                            >ul{
+                                width: 100%;
+                                background-color: white;
+                                border: 1px solid rgba(122, 122, 122, 0.539);
+                                border-radius: 10px;
+                                padding: 10px 10px;
+                                >li{
+                                    height: 50px;
+                                    margin-bottom: 5px;
+                                    &:nth-of-type(1){
+                                        >a{
+                                            border: 2px solid blue;
+                                            background-color: rgba(0, 0, 255, 0.034);
+                                        }
+                                    }
+                                    &:nth-of-type(4){
+                                        margin-bottom: 0;
+                                    }
+                                    >a{
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        border-radius: 10px;
+                                        &:hover{
+                                            background-color: rgba(0, 0, 0, 0.058);
+                                        }
+                                        >img{
+                                            width: 20%;
+                                            padding: 10px 10px;
+                                        }
+                                        >span{
+                                            width: 80%;
+                                            padding: 3px 3px;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            >ul{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                /* border: 2px solid blue; */
+                margin-right: 10px;
+                height: 100%;
+                >li{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    &:hover{
+                        >.mega-menu{
+                            height: 400px;
+                            border-bottom: 1px solid rgba(130, 130, 130, 0.404);
+                            border-top: 1px solid rgba(130, 130, 130, 0.404);
+                        }
+                        >a{
+                            >h3{
+                                color: blue;
+                            }
+                        }
+                    }
+                    >a{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        padding: 0 10px;
+                        height: 100%;
+                        position: relative;
+                        >.underline{
+                            position: absolute;
+                            height: 2px;
+                            width: 0;
+                            right: 0;
+                            bottom: 0px;
+                            background-color: rgb(0, 0, 0);
+                        }
+                        &:hover{
+                            >.underline{
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    >.mega-menu{
+                        position: absolute;
+                        overflow: hidden;
+                        transition: .5s, border .1s;
+                        z-index: -10;
+                        background-color: rgb(255, 255, 255);
+                        width: 100%;
+                        height: 0px;
+                        top: 100px;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        padding: 0 200px;
+                        border-top: 0px solid rgba(130, 130, 130, 0.404);
+                        border-bottom: 0px solid rgba(130, 130, 130, 0);
+                        
+                        >.right-side{
+                            width: 475px;
+                            height: 100%;
+                            /* border: 1px solid red; */
+                            display: flex;
+                            flex-wrap: wrap;
+                            >div{
+                                width: 100%;
+                                height: 200px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-content: center;
+                                >h2{
+                                    font-size: 20px;
+                                    width: 100%;
+                                    margin-bottom: 10px;
+                                }
+                                >a{
+                                    width: 220px;
+                                    height: 120px;
+                                    display: flex;
+                                    justify-content: center;
+                                    flex-wrap: wrap;
+                                    border: 1px solid rgba(143, 143, 143, 0.442);
+                                    padding: 20px 30px;
+                                    border-radius: 10px;
+                                    transition: .5s;
+                                    &:hover{
+                                        border-radius: 30px;
+                                        background-color: rgba(0, 0, 0, 0.212);
+
+                                    }
+                                    &:nth-of-type(1){
+                                        margin-left: 20px;
+                                    }
+                                    >img{
+                                        width: 100%;
+                                        height: 60%;
+                                        object-fit: contain;
+                                    }
+                                    >h3{
+                                        width: 100%;
+                                        height: 40%;
+                                        display: flex;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                        }
+                        >.center-side{
+                            width: 35%;
+                            /* border: 1px solid teal; */
+                            height: 100%;
+                            margin-right: 60px;
+                            margin-left: 20px;
+                            >div{
+                                display: flex;
+                                flex-wrap: wrap;
+                                >a{
+                                    width: 100%;
+                                    /* border: 1px solid green; */
+                                    height: 30px;
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 20px;
+                                    margin-top: 10px;
+                                    >h5{
+                                        position: relative;
+                                        &:hover{
+                                            >span{
+                                                width: 100%;
+                                            }
+                                        }
+                                        >span{
+                                            position: absolute;
+                                            right: 0;
+                                            bottom: -5px;
+                                            width: 0%;
+                                            height: 2px;
+                                            background-color: rgb(0, 0, 0);
+                                            transition: .5s;
+                                        }
+                                    }
+                                    >i{
+                                        margin-top: 5px;
+                                    }
+                                    
+                                }
+                                >div{
+                                    height: 370px;
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    /* border: 1px solid blue; */
+                                    >a{
+                                        width: fit-content;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        padding: 5px 0;
+                                        /* border: 1px solid green; */
+                                        align-items: center;
+                                        font-size: 22px;
+                                        &:nth-of-type(1){
+                                            >i{
+                                                color: blue;
+                                            }
+                                        }
+                                        &:nth-of-type(2){
+                                            >i{
+                                                color: red;
+                                            }
+                                        }
+                                        &:nth-of-type(3){
+                                            >i{
+                                                color: gray;
+                                            }
+                                        }
+                                        &:nth-of-type(4){
+                                            >i{
+                                                color: goldenrod;
+                                            }
+                                        }
+                                        &:nth-of-type(5){
+                                            >i{
+                                                color: blueviolet;
+                                            }
+                                        }
+                                        &:nth-of-type(6){
+                                            >i{
+                                                color: red;
+                                            }
+                                        }
+                                        &:nth-of-type(7){
+                                            >i{
+                                                color: blue;
+                                            }
+                                        }
+                                        &:nth-of-type(8){
+                                            >i{
+                                                color: rgb(107, 107, 0);
+                                            }
+                                        }
+                                        &:nth-of-type(9){
+                                            >i{
+                                                color: blue;
+                                            }
+                                        }
+                                        &:nth-of-type(10){
+                                            >i{
+                                                color: rgb(128, 128, 0);
+                                            }
+                                        }
+                                        &:nth-of-type(11){
+                                            >i{
+                                                color: red;
+                                            }
+                                        }
+                                        &:nth-of-type(12){
+                                            >i{
+                                                color: palevioletred;
+                                            }
+                                        }
+                                        &:nth-of-type(13){
+                                            >i{
+                                                color: goldenrod;
+                                            }
+                                        }
+                                        &:nth-of-type(14){
+                                            >i{
+                                                color: blueviolet;
+                                            }
+                                        }
+                                        &:nth-of-type(15){
+                                            >i{
+                                                color: green;
+                                            }
+                                        }
+                                        &:hover{
+                                            >h5{
+                                                >span{
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                        >i{
+                                            margin-left: 5px;
+                                        }
+                                        >h5{
+                                            font-family: fanavari-bold;
+                                            position: relative;
+                                            >span{
+                                                position: absolute;
+                                                right: 0;
+                                                bottom: -5px;
+                                                width: 0%;
+                                                height: 2px;
+                                                background-color: rgb(0, 0, 0);
+                                                transition: .5s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        >.left-side{
+                            width: 15%;
+                            height: 400px;
+                            /* border: 1px solid red; */
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: space-evenly;
+                            >a{
+                                width: 100%;
+                                height: 20%;
+                                border: 1px solid rgba(143, 143, 143, 0.442);
+                                border-radius: 10px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                transition: .5s;
+                                &:hover{
+                                    border-radius: 30px;
+                                    background-color: rgba(0, 0, 0, 0.212);
+
+                                }
+                                >img{
+                                  width: 30%;  
+                                  padding: 10px 20px;
+                                  object-fit: contain;
+                                }
+                                >div{
+                                    width: 70%;
+                                    display: flex;
+                                    align-content: center;
+                                    flex-wrap: wrap;
+                                    >*{
+                                        width: 100%;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .menu2{
+            display: flex;
+            align-items: center;
+            margin-right: 70px;
+            >*{
+                font-size: 20px;
+                font-family: fanavari-bold;
+                margin-right: 10px;
+                border-radius: 5px;
+                padding: 10px 15px;
+            }
+            >a{
+                &:nth-of-type(1){
+                    color: rgb(255, 184, 52);
+                    border: 2px solid rgb(255, 175, 27);
+                    background-color: #FEF9F4;
+                    transition: .4s;
+                    &:hover{
+                        background-color: rgb(255, 175, 27);
+                        color: white;
+                    }
+                }
+                &:nth-of-type(2){
+                    color: black;
+                    border: 2px solid rgba(0, 0, 0, 0.175);
+                    transition: .4s;
+                    &:hover{
+                        background-color: rgb(0, 0, 0);
+                        color: white;
+                    }
+                }
+                &:nth-of-type(3){
+                    color: black;
+                    border: 2px solid blue;
+                    transition: .4s;
+                    &:hover{
+                        background-color: blue;
+                        color: white;
+                    }
+                }
+                &:nth-of-type(4){
+                    position: relative;
+                    padding: 0 0;
+                    >span{
+                        position: absolute;
+                        height: 2px;
+                        width: 0;
+                        right: 0;
+                        bottom: 0px;
+                        background-color: rgb(0, 0, 0);
+                        transition: .4s;
+                    }
+                    &:hover{
+                        >span{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
