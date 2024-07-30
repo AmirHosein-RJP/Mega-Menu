@@ -16,8 +16,9 @@
 ## 📃Description
 <ul>
     <li><strong>🌐Front-End</strong></li>
-  <li><strong>📅created at: july/19/24</strong></li>
+  <li><strong>📅created at: july/26/24</strong></li>
   <li><strong>❌Not Responsive</strong></li>
+  <li><strong>🔗<a href="https://www.karlancer.com/" target="_blank">Refrences</a></strong></li>
 </ul>
 <br>
 
